@@ -1,0 +1,1025 @@
+<div id="hc_richmedia">
+    <meta name="viewport" content="width=device-width">
+        <style>
+            body {
+                margin: 0;
+            }
+            .hc_table { display: table; }
+            .hc_table-row { display: table-row; }
+            .hc_table-cell {
+                display: table-cell;
+                vertical-align: middle;
+            }
+			#hc_richmedia {
+				width: 320px;
+				margin: 0 auto;
+			}
+            #hc_richmedia .hc_expand {
+				background: transparent url('images/sherwin/46289.png') no-repeat;
+				color: white;
+				font-weight: bold;
+				font-size: 2em;
+				text-align: center;	
+				width: 100%;
+				height: 50px;
+				background-size: cover;
+				display: block;
+			}
+            #hc_richmedia .hc_closebtn {
+                position:absolute;
+                top: 0;
+                right: 0;
+                z-index:2;
+                cursor:pointer;
+                display: block;
+                height: 45px;
+                width: 60px;
+            }
+            #hc_richmedia .hc_closebtn img {
+                position:relative;
+                z-index:20;
+            }
+            #hc_richmedia .hc_content {
+                position:relative;
+                width: 100%;
+                text-align:center;
+                z-index:1;
+            }
+			#hc_header { 
+				width: 100%; 
+				display: block;
+				margin-bottom: 1px;
+				}
+			/* start */
+			
+			#hc_start {
+				background: #656463;
+				text-align: center;
+				height: 460px;
+			}
+			#hc_start .hc_logo {
+				width: 35%;
+				margin: 2% auto 0;
+				
+			}
+			p.hc_instruct {
+				font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: .7em;
+				color: white;
+				font-weight: lighter;
+				margin-top: 0;
+			}
+			#hc_start .hc_table {
+				width: 95%;
+				margin: 0 auto;
+			}
+			#hc_start .hc_table-cell {
+				width: 50%;
+				padding: .5em;
+			}
+			#hc_start .hc_table-cell img {
+				width: 100%;
+			}
+			
+			/* colorsnap */
+			
+			#hc_frame {
+				display: none;
+			}
+			#hc_frame img.hc_pallette {
+				width: 100%;
+			}
+			.hc_description, .hc_tout {
+				text-align: left;
+				padding: .5em;
+				color: white;
+				font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: .75em;
+			}
+			#hc_targets {
+				position: absolute;
+				top: 45px;
+				width: 100%;
+				height: 341px;
+			}
+			#hc_targets a {
+				position: absolute;
+				z-index: 2;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				border: 5px solid rgb(90, 90, 90);
+    			border: 5px solid rgba(90, 90, 90, .5);
+				width: 40px;
+				height: 40px;	
+				-webkit-background-clip: padding-box; /* for Safari */
+    			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+				color: white;
+				text-decoration: none;
+				text-indent: -99999px;
+			}
+			#hc_targets a.selected {
+				border: 5px solid rgb(255, 255, 255);
+			}
+			
+			.hc_bridge_set #hc_targets a.hc_first { 
+				left: 82%;
+				top: 22%;
+			}
+			.hc_bridge_set #hc_targets a.hc_second { 
+				left: 35%;
+				top: 86%;
+			}
+			.hc_bridge_set #hc_targets a.hc_third { 
+				left: 46%;
+				top: 55%;
+			}
+			.hc_bridge_set #hc_targets a.hc_fourth { 
+				left: 80%;
+				top: 70%;
+			}
+			.hc_bridge_set #hc_targets a.hc_fifth { 
+				left: 10%;
+				top: 73%;
+			}
+			.hc_bridge_set #hc_targets a.hc_sixth { 
+				left: 21%;
+				top: 26%;
+				width: 50px !important;
+				height: 50px !important;
+			}
+			.hc_bridge_set #hc_targets a.hc_seventh { 
+				left: 53%;
+				top: 2%;
+			}
+			.hc_bridge_set #hc_targets a.hc_eighth { 
+				left: 30%;
+				top: 90%;
+			}
+			.hc_bridge_set a.hc_first { 
+				background-color: #ea887d;
+			}
+			.hc_bridge_set a.hc_second { 
+				background-color: #445425;
+			}
+			.hc_bridge_set a.hc_third { 
+				background-color: #655c5f;
+			}
+			.hc_bridge_set a.hc_fourth { 
+				background-color: #343432;
+			}
+			.hc_bridge_set a.hc_fifth { 
+				background-color: #a34126;
+			}
+			.hc_bridge_set a.hc_sixth { 
+				background-color: #d1392c;
+			}
+			.hc_bridge_set a.hc_seventh { 
+				background-color: #b2b9cb;
+			}
+
+			.hc_porch_set #hc_targets a.hc_first { 
+				left: 39%;
+				top: 84%;
+			}
+			.hc_porch_set #hc_targets a.hc_second { 
+				left: 1%;
+				top: 45%;
+				width: 50px !important;
+				height: 50px !important;
+			}
+			.hc_porch_set #hc_targets a.hc_third { 
+				left: 75%;
+				top: 75%;
+			}
+			.hc_porch_set #hc_targets a.hc_fourth { 
+				left: 47%;
+				top: 55%;
+			}
+			.hc_porch_set #hc_targets a.hc_fifth { 
+				left: 59%;
+				top: 41%;
+			}
+			.hc_porch_set #hc_targets a.hc_sixth { 
+				left: 25%;
+				top: 23%;
+			}
+			.hc_porch_set #hc_targets a.hc_seventh { 
+				left: 47%;
+				top: 8%;
+			}
+			.hc_porch_set a.hc_first { 
+				background-color: #2e4531;
+			}
+			.hc_porch_set a.hc_second { 
+				background-color: #8f212a;
+			}
+			.hc_porch_set a.hc_third { 
+				background-color: #596e67;
+			}
+			.hc_porch_set a.hc_fourth { 
+				background-color: #c9a784;
+			}
+			.hc_porch_set a.hc_fifth { 
+				background-color: #9f5434;
+			}
+			.hc_porch_set a.hc_sixth { 
+				background-color: #a69a8a;
+			}
+			.hc_porch_set a.hc_seventh { 
+				background-color: #5e4330;
+			}
+
+			.hc_couch_set #hc_targets a.hc_first { 
+				left: 32%;
+				top: 22%;
+				width: 50px !important;
+				height: 50px !important;
+			}
+			.hc_couch_set #hc_targets a.hc_second { 
+				left: 6%;
+				top: 33%;
+			}
+			.hc_couch_set #hc_targets a.hc_third { 
+				left: 22%;
+				top: 2%;
+			}
+			.hc_couch_set #hc_targets a.hc_fourth { 
+				left: 17%;
+				top: 86%;
+			}
+			.hc_couch_set #hc_targets a.hc_fifth { 
+				left: 50%;
+				top: 61%;
+			}
+			.hc_couch_set #hc_targets a.hc_sixth { 
+				left: 85%;
+				top: 79%;
+			}
+			.hc_couch_set #hc_targets a.hc_seventh { 
+				left: 2%;
+				top: 2%;
+			}
+			.hc_couch_set #hc_targets a.hc_eighth { 
+				left: 23%;
+				top: 88%;
+				background-color: #23262b;
+			}
+			.hc_couch_set a.hc_first { 
+				background-color: #b49775;
+			}
+			.hc_couch_set a.hc_second { 
+				background-color: #8f212a;
+			}
+			.hc_couch_set a.hc_third { 
+				background-color: #847a6a;
+			}
+			.hc_couch_set a.hc_fourth { 
+				background-color: #626b70;
+			}
+			.hc_couch_set a.hc_fifth { 
+				background-color: #e1e5e6;
+			}
+			.hc_couch_set a.hc_sixth { 
+				background-color: #246983;
+			}
+			.hc_couch_set a.hc_seventh { 
+				background-color: #c8cb32;
+			}
+			.hc_couch_set a.hc_eighth { 
+				background-color: #23262b;
+			}
+			.hc_living_set #hc_targets a.hc_first { 
+				left: 72%;
+				top: 81%;
+			}
+			.hc_living_set #hc_targets a.hc_second { 
+				left: 1%;
+				top: 71%;
+				width: 50px !important;
+				height: 50px !important;
+			}
+			.hc_living_set #hc_targets a.hc_third { 
+				left: 17%;
+				top: 84%;
+			}
+			.hc_living_set #hc_targets a.hc_fourth { 
+				left: 60%;
+				top: 56%;
+			}
+			.hc_living_set #hc_targets a.hc_fifth { 
+				left: 74%;
+				top: 38%;
+			}
+			.hc_living_set #hc_targets a.hc_sixth { 
+				left: 52%;
+				top: 32%;
+			}
+			.hc_living_set #hc_targets a.hc_seventh { 
+				left: 62%;
+				top: 12%;
+			}
+			.hc_living_set #hc_targets a.hc_eighth { 
+				left: 23%;
+				top: 88%;
+				background-color: #23262b;
+			}
+			.hc_living_set a.hc_first { 
+				background-color: #b46a43;
+			}
+			.hc_living_set a.hc_second { 
+				background-color: #3d4a5d;
+			}
+			.hc_living_set a.hc_third { 
+				background-color: #423f38;
+			}
+			.hc_living_set a.hc_fourth { 
+				background-color: #5b482a;
+			}
+			.hc_living_set a.hc_fifth { 
+				background-color: #175ea2;
+			}
+			.hc_living_set a.hc_sixth { 
+				background-color: #b46a43;
+			}
+			.hc_living_set a.hc_seventh { 
+				background-color: #bebdbb;
+			}
+			.hc_living_set a.hc_eighth { 
+				background-color: #23262b;
+			}
+			#hc_targets_bottom {
+				position: absolute;
+				z-index: 2;
+				width: 210px;
+				height: 30px;	
+				-webkit-background-clip: padding-box; /* for Safari */
+    			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+				color: white;
+				text-decoration: none;
+				display: inline-block;
+				bottom: 0;
+				text-align: right;
+				right: 0;
+			}
+			#hc_targets_bottom a {
+				position: relative;
+				z-index: 2;
+				border-top: 2px solid white;
+				border-left: 2px solid white;
+				width: 28px;
+				height: 28px;	
+				-webkit-background-clip: padding-box; /* for Safari */
+    			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+				color: white;
+				text-decoration: none;
+				display: inline-block;
+				float: left;
+				text-indent: -99999px;
+			}
+
+			.hc_bridge_set #hc_targets_bottom a.hc_first.selected { 
+				border-top: 2px solid  #ea887d;
+			}
+			.hc_bridge_set #hc_targets_bottom a.hc_second.selected { 
+				border-top: 2px solid  #445425;
+			}
+			.hc_bridge_set #hc_targets_bottom a.hc_third.selected { 
+				border-top: 2px solid  #655c5f;
+			}
+			.hc_bridge_set #hc_targets_bottom a.hc_fourth.selected { 
+				border-top: 2px solid  #343432;
+			}
+			.hc_bridge_set #hc_targets_bottom a.hc_fifth.selected { 
+				border-top: 2px solid  #a34126;
+			}
+			.hc_bridge_set #hc_targets_bottom a.hc_sixth.selected { 
+				border-top: 2px solid  #d1392c;
+			}
+			.hc_bridge_set #hc_targets_bottom a.hc_seventh.selected { 
+				border-top: 2px solid  #b2b9cb;
+			}
+			.hc_porch_set #hc_targets_bottom a.hc_first.selected { 
+				border-top: 2px solid  #2e4531;
+			}
+			.hc_porch_set #hc_targets_bottom a.hc_second.selected { 
+				border-top: 2px solid  #8f212a;
+			}
+			.hc_porch_set #hc_targets_bottom a.hc_third.selected { 
+				border-top: 2px solid  #596e67;
+			}
+			.hc_porch_set #hc_targets_bottom a.hc_fourth.selected { 
+				border-top: 2px solid  #c9a784;
+			}
+			.hc_porch_set #hc_targets_bottom a.hc_fifth.selected { 
+				border-top: 2px solid  #9f5434;
+			}
+			.hc_porch_set #hc_targets_bottom a.hc_sixth.selected { 
+				border-top: 2px solid  #a69a8a;
+			}
+			.hc_porch_set #hc_targets_bottom a.hc_seventh.selected { 
+				border-top: 2px solid  #5e4330;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_first.selected { 
+				border-top: 2px solid  #b49775;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_second.selected { 
+				border-top: 2px solid  #8f212a;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_third.selected { 
+				border-top: 2px solid  #847a6a;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_fourth.selected { 
+				border-top: 2px solid  #626b70;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_fifth.selected { 
+				border-top: 2px solid  #e1e5e6;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_sixth.selected { 
+				border-top: 2px solid  #246983;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_seventh.selected { 
+				border-top: 2px solid  #c8cb32;
+			}
+			.hc_couch_set #hc_targets_bottom a.hc_eighth.selected { 
+				border-top: 2px solid  #23262b;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_first.selected { 
+				border-top: 2px solid  #b46a43;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_second.selected { 
+				border-top: 2px solid  #3d4a5d;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_third.selected { 
+				border-top: 2px solid  #423f38;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_fourth.selected { 
+				border-top: 2px solid  #5b482a;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_fifth.selected { 
+				border-top: 2px solid  #175ea2;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_sixth.selected { 
+				border-top: 2px solid  #b46a43;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_seventh.selected { 
+				border-top: 2px solid  #bebdbb;
+			}
+			.hc_living_set #hc_targets_bottom a.hc_eighth.selected { 
+				border-top: 2px solid  #23262b;
+			}
+			.hc_bridge_set .hc_widget {
+				background: transparent url('images/sherwin/44762.gif') no-repeat;
+				background-size: 20px 20px;
+			}
+			.hc_porch_set .hc_widget {
+				background: transparent url('images/sherwin/44763.gif') no-repeat;
+				background-size: 20px 20px;
+			}
+			.hc_couch_set .hc_widget {
+				background: transparent url('images/sherwin/44765.gif') no-repeat;
+				background-size: 20px 20px;
+			}
+			.hc_living_set .hc_widget {
+				background: transparent url('images/sherwin/44764.gif') no-repeat;
+				background-size: 20px 20px;
+			}
+			.hc_widget {
+				position: absolute;
+				height: 20px;
+				width: 20px;
+				border: 1px solid white;
+				right: 3px;
+				bottom: 35px;
+			}
+			#hc_cta {
+				display: none;
+				background: transparent url('images/sherwin/44766.jpg') no-repeat;
+				background-size: cover;
+				height: 460px;
+				position: absolute;
+				top: 46px;
+			}
+			.hc_btn_download {
+				color: #1b5072;
+				background-color: white;
+				text-decoration: none;
+				display: block;
+				margin: 0 auto;
+				width: 50%;
+				font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				vertical-align:middle;
+				padding: 1em;	
+				margin-bottom: .5em;
+			}
+			.hc_btn_startover {
+				color: #1b5072;
+				background-color: white;
+				text-decoration: none;
+				display: block;
+				margin: 0 auto 0;
+				width: 30%;
+				font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				vertical-align:middle;
+				padding: .4em;	
+				margin-bottom: .5em;
+				margin-top: 2em;
+				font-size: .8em;
+				position: relative;
+				top: 30px;
+			}
+			a.hc_btnback {
+				color: #1b5072;
+				background-color: white;
+				text-decoration: none;
+				display: block;
+				margin: 0 auto;
+				width: 45px;
+				font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				vertical-align:middle;
+				padding: .2em .5em .2em .6em;	
+				margin-bottom: .5em;
+				position: absolute;
+				top: 4.3em;
+				right: 2px;
+				font-size: .7em;
+				text-align: center;
+			}
+			#hc_cta .hc_logo {
+				width: 35%;
+				margin-top: 5em;
+			}
+			#hc_cta p.hc_instruct {
+				width: 90%;
+				line-height: 1.3em;	
+				margin: 1em auto 1.5em;
+				font-size: .8em;
+				font-weight: bold;
+			}
+        </style>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	  <!--<script src="scripts/sherwin/hc_framework-0_2.js"></script>-->
+    <script src="scripts/sherwin/hc_framework.js"></script>
+	  <script type="text/javascript">
+			"use strict";
+			var hc_ = new hc_({
+				"prod" : true,
+				"clientId" : "3170",
+				"targetUrl" : "",
+				"publisherId" : "%p%",
+				"augmeId" : "%augmeid%",
+				"adId" : "%ad_id%",
+				"campaignId" : "%c%",
+    			"track" : ""
+			});
+            
+            var imageBaseName = ["images/sherwin/44758.jpg", "images/sherwin/44761.jpg", "images/sherwin/44759.jpg", "images/sherwin/44760.jpg", "images/sherwin/44772.jpg", "images/sherwin/44771.png", "images/sherwin/44768.jpg", "images/sherwin/44767.jpg", "images/sherwin/44769.jpg", "images/sherwin/44770.jpg"];
+
+			function preloadBasic(e) {
+				var t = 0;
+				var n = [];
+				for (t = 0; t < e.length; t++) {
+					n[t] = new Image;
+					n[t].src = e[t]
+				}
+                console.log("completed");
+                hc_$(".demo_ad", window.parent.document).removeClass("poof");
+            	hc_$(".loader", window.parent.document).addClass("off");
+			}
+
+			preloadBasic(imageBaseName);
+          
+			 hc_.events.hc_expand_after = function () { 
+					hc_$("#hc_richmedia .hc_content").show();
+					hc_$("#hc_richmedia .hc_closebtn").show();
+					hc_$("#hc_richmedia .hc_initial_view").hide();
+					hc_$("#hc_start").show();
+					hc_$("#hc_frame").hide();
+					hc_$("#hc_cta").hide();
+					return true;
+			 };
+			 hc_.events.hc_closebtn_after = function () { 
+					hc_$("#hc_richmedia .hc_content").hide();
+					hc_$("#hc_richmedia .hc_closebtn").hide();
+					hc_$("#hc_frame").hide();
+					hc_$("#hc_cta").hide();
+					return true;
+			 };
+		</script>
+        <script type="text/javascript" src="mraid.js"></script>
+<script>
+var colorStructure = {  
+   "colorPicker":[  
+      {  
+            "background":"images/sherwin/44758.jpg",
+            "colors":[  
+               {  
+                  "color_id":"SW 6875",
+                  "color_name":"Gladiola",
+                  "color_hex":"d1392c"
+               },
+               {  
+                  "color_id":"SW 6873",
+                  "color_name":"Coral Bead",
+                  "color_hex":"ea887d"
+               },
+               {  
+                  "color_id":"SW 6433",
+                  "color_name":"Inverness",
+                  "color_hex":"445425"
+               },
+               {  
+                  "color_id":"SW 7629",
+                  "color_name":"Grapy",
+                  "color_hex":"655c5f"
+               },
+               {  
+                  "color_id":"SW 7069",
+                  "color_name":"Iron Ore",
+                  "color_hex":"343432"
+               },
+               {  
+                  "color_id":"SW 6629",
+                  "color_name":"Jalapeno",
+                  "color_hex":"a34126"
+               },
+               {  
+                  "color_id":"SW 6875",
+                  "color_name":"Gladiola",
+                  "color_hex":"d1392c"
+               },
+               {  
+                  "color_id":"SW 6534",
+                  "color_name":"Icy",
+                  "color_hex":"b2b9cb"
+               }
+            ]
+      },
+      {  
+            "background":"images/sherwin/44761.jpg",
+            "colors":[  
+               {  
+                  "color_id":"SW 6775",
+                  "color_name":"Briny",
+                  "color_hex":"246983"
+               },
+               {  
+                  "color_id":"SW 6321",
+                  "color_name":"Red Bay",
+                  "color_hex":"8f212a"
+               },
+               {  
+                  "color_id":"SW 2840",
+                  "color_name":"Hammered Silver",
+                  "color_hex":"847a6a"
+               },
+               {  
+                  "color_id":"SW 2839",
+                  "color_name":"Roycroft Copper Red",
+                  "color_hex":"662413"
+               },
+               {  
+                  "color_id":"SW 6995",
+                  "color_name":"Superwhite",
+                  "color_hex":"e1e5e6"
+               },
+               {  
+                  "color_id":"SW 6235",
+                  "color_name":"Foggy Day",
+                  "color_hex":"626b70"
+               },
+               {  
+                  "color_id":"SW 7538",
+                  "color_name":"Tamarind",
+                  "color_hex":"b49775"
+               },
+               {  
+                  "color_id":"SW 6703",
+                  "color_name":"Frolic",
+                  "color_hex":"c8cb32"
+               }
+            ]
+      },
+      {  
+            "background":"images/sherwin/44759.jpg",
+            "colors":[  
+               {  
+                  "color_id":"SW 6321",
+                  "color_name":"Red Bay",
+                  "color_hex":"8f212a"
+               },
+               {  
+                  "color_id":"SW 6594",
+                  "color_name":"Poinsettia",
+                  "color_hex":"8f212a"
+               },
+               {  
+                  "color_id":"SW 6461",
+                  "color_name":"Isle of Pines",
+                  "color_hex":"2e4531"
+               },
+               {  
+                  "color_id":"SW 0047",
+                  "color_name":"Studio Blue Green",
+                  "color_hex":"596e67"
+               },
+               {  
+                  "color_id":"SW 6068",
+                  "color_name":"Brevity Brown",
+                  "color_hex":"5e4330"
+               },
+               {  
+                  "color_id":"SW 6341",
+                  "color_name":"Red Cent",
+                  "color_hex":"9f5434"
+               },
+               {  
+                  "color_id":"SW 7704",
+                  "color_name":"Tower Tan",
+                  "color_hex":"c9a784"
+               },
+               {  
+                  "color_id":"SW 6073",
+                  "color_name":"Perfect Greige",
+                  "color_hex":"a69a8a"
+               }
+            ]
+      },
+      {  
+            "background":"images/sherwin/44760.jpg",
+            "colors":[  
+               {  
+                  "color_id":"SW 7602",
+                  "color_name":"Indigo Batik",
+                  "color_hex":"3d4a5d"
+               },
+               {  
+                  "color_id":"SW 7028",
+                  "color_name":"Incredible White",
+                  "color_hex":"dcd8cd"
+               },
+               {  
+                  "color_id":"SW 7641",
+                  "color_name":"Collonade Gray",
+                  "color_hex":"b8b2a4"
+               },
+               {  
+                  "color_id":"SW 7048",
+                  "color_name":"Urbane Bronze",
+                  "color_hex":"423f38"
+               },
+               {  
+                  "color_id":"SW 6111",
+                  "color_name":"Coconut Husk",
+                  "color_hex":"5b482a"
+               },
+               {  
+                  "color_id":"SW 6796",
+                  "color_name":"Blue Plate",
+                  "color_hex":"175ea2"
+               },
+               {  
+                  "color_id":"SW 6340",
+                  "color_name":"Baked Clay",
+                  "color_hex":"b46a43"
+               },
+               {  
+                  "color_id":"SW 7667",
+                  "color_name":"Zircon",
+                  "color_hex":"bebdbb"
+               }
+            ]
+         }
+   ]
+};
+	var timerId;
+
+function buildScene(which) {
+	hc_$('#hc_start').hide();
+	hc_$('#hc_frame').show();
+	hc_$("#hc_frame").css('visibility', 'visible');
+	hc_$('#hc_frame img.hc_pallette').attr('src', colorStructure.colorPicker[which].background );
+	hc_$('#hc_frame').css('background-color', '#' + colorStructure.colorPicker[which].colors[0].color_hex);
+    hc_$('div.hc_description').html(colorStructure.colorPicker[which].colors[0].color_name + '<br />' + colorStructure.colorPicker[which].colors[0].color_id);
+	if (which === '0') { 
+		changeTarg('a.hc_sixth');
+		}
+	else if (which === '1') {
+		changeTarg('a.hc_sixth');
+	}
+	else if (which === '2') {
+		changeTarg('a.hc_second');
+	}
+	else if (which === '3') {
+		changeTarg('a.hc_second');
+	}
+		
+	hc_$("div.hc_targets a").on('click', function() { 
+		changeTarg(hc_$(this));
+		clearTimeout(timerId);
+    	timerId = setTimeout(timerExpired, 5000);
+		return true;
+		});
+		
+  	hc_$("div#hc_frame.hc_bridge_set a.hc_first").on('click', function() { changeDesc('0','1'); });
+	hc_$("div#hc_frame.hc_bridge_set a.hc_second").on('click', function() { changeDesc('0','2'); });
+	hc_$("div#hc_frame.hc_bridge_set a.hc_third").on('click', function() { changeDesc('0','3'); });
+	hc_$("div#hc_frame.hc_bridge_set a.hc_fourth").on('click', function() { changeDesc('0','4'); });
+	hc_$("div#hc_frame.hc_bridge_set a.hc_fifth").on('click', function() { changeDesc('0','5'); });
+	hc_$("div#hc_frame.hc_bridge_set a.hc_sixth").on('click', function() { changeDesc('0','0'); });
+	hc_$("div#hc_frame.hc_bridge_set a.hc_seventh").on('click', function() { changeDesc('0','7'); });
+
+	hc_$("div#hc_frame.hc_porch_set a.hc_first").on('click', function() { changeDesc('2','2'); });
+	hc_$("div#hc_frame.hc_porch_set a.hc_second").on('click', function() { changeDesc('2','1'); });
+	hc_$("div#hc_frame.hc_porch_set a.hc_third").on('click', function() { changeDesc('2','3'); });
+	hc_$("div#hc_frame.hc_porch_set a.hc_fourth").on('click', function() { changeDesc('2','6'); });
+	hc_$("div#hc_frame.hc_porch_set a.hc_fifth").on('click', function() { changeDesc('2','5'); });
+	hc_$("div#hc_frame.hc_porch_set a.hc_sixth").on('click', function() { changeDesc('2','7'); });
+	hc_$("div#hc_frame.hc_porch_set a.hc_seventh").on('click', function() { changeDesc('2','4'); });
+
+	hc_$("div#hc_frame.hc_couch_set a.hc_first").on('click', function() { changeDesc('1','6'); });
+	hc_$("div#hc_frame.hc_couch_set a.hc_second").on('click', function() { changeDesc('1','1'); });
+	hc_$("div#hc_frame.hc_couch_set a.hc_third").on('click', function() { changeDesc('1','2'); });
+	hc_$("div#hc_frame.hc_couch_set a.hc_fourth").on('click', function() { changeDesc('1','5'); });
+	hc_$("div#hc_frame.hc_couch_set a.hc_fifth").on('click', function() { changeDesc('1','4'); });
+	hc_$("div#hc_frame.hc_couch_set a.hc_sixth").on('click', function() { changeDesc('1','0'); });
+	hc_$("div#hc_frame.hc_couch_set a.hc_seventh").on('click', function() { changeDesc('1','7'); });
+
+	hc_$("div#hc_frame.hc_living_set a.hc_first").on('click', function() { changeDesc('3','6'); });
+	hc_$("div#hc_frame.hc_living_set a.hc_second").on('click', function() { changeDesc('3','0'); });
+	hc_$("div#hc_frame.hc_living_set a.hc_third").on('click', function() { changeDesc('3','3'); });
+	hc_$("div#hc_frame.hc_living_set a.hc_fourth").on('click', function() { changeDesc('3','4'); });
+	hc_$("div#hc_frame.hc_living_set a.hc_fifth").on('click', function() { changeDesc('3','5'); });
+	hc_$("div#hc_frame.hc_living_set a.hc_sixth").on('click', function() { changeDesc('3','6'); });
+	hc_$("div#hc_frame.hc_living_set a.hc_seventh").on('click', function() { changeDesc('3','7'); });
+
+	return true;
+
+
+};
+
+function changeDesc(set, whichColor) {
+	hc_$('#hc_frame img.hc_pallette').attr('src', colorStructure.colorPicker[set].background );
+	hc_$('#hc_frame').css('background-color', '#' + colorStructure.colorPicker[set].colors[whichColor].color_hex);
+    hc_$('div.hc_description').html(colorStructure.colorPicker[set].colors[whichColor].color_name + '<br />' + colorStructure.colorPicker[set].colors[whichColor].color_id);
+	return true;
+};
+function changeTarg(colorPair) {
+	hc_$("div#hc_frame a").removeClass('selected');
+	var colorAnchors = hc_$(colorPair).attr('class');
+	console.log(colorAnchors);
+	hc_$('.' + colorAnchors).addClass('selected');
+	return true;
+};
+function timerExpired() {
+	hc_$("#hc_cta").fadeIn();
+	hc_$("#hc_frame").css('visibility', 'hidden');
+	return true;
+}
+  /* 3rd party impression tracking */
+  
+  /*hc_$("#hc_richmedia").append(hc_$("img").attr('src', 'http://ad.doubleclick.net/ad/N5914.285074.HIPCRICKET/B7977793.112470024;sz=1x1;ord=' + (new Date()).getTime() + '?').css({
+	'position': 'absolute',
+	'height': '1px',
+	'width': '1px'
+  }));*/
+
+hc_$( document ).ready(function() {
+  
+    /*if (!hc_$(".back_btn", window.parent.document).hasClass("cat")) {
+  
+  hc_$(".hc_expand").on("click tap", function () {
+        $(".back_btn", window.parent.document).fadeOut();
+    });
+
+    hc_$(".hc_closebtn").on("click tap", function () {
+        hc_$(".back_btn", window.parent.document).fadeIn();
+    });
+      					
+     }*/
+    
+    
+
+	hc_$('#hc_clickthrough').attr('href', 'https://itunes.apple.com/us/app/colorsnap/id316256242?mt=8');
+
+	hc_$("#hc_start a.hc_porch").click(function() { 
+		hc_$("#hc_frame").removeClass();
+		hc_$("#hc_frame").addClass('hc_porch_set');
+		buildScene('2'); 
+		return false;
+		});
+	hc_$("#hc_start a.hc_living").click(function() { 
+		hc_$("#hc_frame").removeClass();
+		hc_$("#hc_frame").addClass('hc_living_set');
+		var startoff = hc_$(this);
+		buildScene('3'); 
+		return false;
+		});
+	hc_$("#hc_start a.hc_bridge").click(function() { 
+		hc_$("#hc_frame").removeClass();
+		hc_$("#hc_frame").addClass('hc_bridge_set');
+		buildScene('0'); 
+		return false;
+		});
+	hc_$("#hc_start a.hc_couch").click(function() { 
+		hc_$("#hc_frame").removeClass();
+		hc_$("#hc_frame").addClass('hc_couch_set');
+		buildScene('1'); 
+		return false;
+		});
+	hc_$('.hc_btnback').	click(function() { 
+		hc_$("#hc_frame").removeClass();
+		hc_$("#hc_start").show();
+		hc_$("#hc_frame").hide();
+		hc_$("#hc_cta").hide();
+		clearTimeout(timerId);
+		return false;
+		});
+	hc_$('.hc_btn_startover').click(function() { 
+		hc_$("#hc_frame").removeClass();
+		hc_$("#hc_start").show();
+		hc_$("#hc_frame").hide();
+		hc_$("#hc_cta").hide();
+		return false;
+		});
+/*
+	if (navigator.userAgent.match(/iPod|iPhone|iPad/i) ) {
+		hc_$('.hc_btn_download').attr('href', 'https://itunes.apple.com/us/app/colorsnap/id316256242?mt=8');
+	};
+*/	
+});
+
+</script>
+ 
+      <!--
+            Make sure all id's and classes are prefixed with hc_
+        -->
+
+            <div class="hc_initial_view">
+                <a href="javascript: void(0);" class="hc_expand"> </a>
+            </div>
+          <div class="hc_content" id="hc_content" style="display:none;">
+          	<div class="hc_closebtn" style="display:none;"> </div>
+            
+            <img src="images/sherwin/44772.jpg" alt="Sherwin-Williams" id="hc_header"/>
+            
+            <div id="hc_start">
+           	  <img src="images/sherwin/44771.png" alt="colorsnap logo" class="hc_logo" />
+              <p class="hc_instruct">Tap an image to find colors that match</p>
+              <div class="hc_table">
+                	<div class="hc_table-row">
+                    	<div class="hc_table-cell">
+                        	<a href="javascript: void(0);" class="hc_porch"><img src="images/sherwin/44767.jpg" alt="porch" /></a>
+                        </div>
+                    	<div class="hc_table-cell">
+                        	<a href="javascript: void(0);" class="hc_living"><img src="images/sherwin/44768.jpg" alt="living room" /></a>
+                        </div>
+                    </div>
+                	<div class="hc_table-row">
+                    	<div class="hc_table-cell">
+                        	<a href="javascript: void(0);" class="hc_bridge"><img src="images/sherwin/44769.jpg" alt="bridge" /></a>
+                        </div>
+                    	<div class="hc_table-cell">
+                        	<a href="javascript: void(0);" class="hc_couch"><img src="images/sherwin/44770.jpg" alt="couch" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="hc_frame">
+              
+              <img class="hc_pallette" src="" alt="pallette" />
+              <div id="hc_targets" class="hc_targets">
+              	<a href="javascript: void(0);" class="hc_first">1</a>
+              	<a href="javascript: void(0);" class="hc_second">2</a>
+              	<a href="javascript: void(0);" class="hc_third">3</a>
+              	<a href="javascript: void(0);" class="hc_fourth">4</a>
+              	<a href="javascript: void(0);" class="hc_fifth">5</a>
+              	<a href="javascript: void(0);" class="hc_sixth">6</a>
+              	<a href="javascript: void(0);" class="hc_seventh">7</a>
+              </div>
+              <a href="#" class="hc_btnback">back</a>
+              <div class="hc_tout">ColorSnap also provides you with coordinating colors.  Touch anywhere on the image to snap its color.</div>
+              <div class="hc_widget"> </div>
+              <div class="hc_description"></div>
+              <div id="hc_targets_bottom" class="hc_targets">
+              	<a href="javascript: void(0);" class="hc_first"> </a>
+              	<a href="javascript: void(0);" class="hc_second"> </a>
+              	<a href="javascript: void(0);" class="hc_third"> </a>
+              	<a href="javascript: void(0);" class="hc_fourth"> </a>
+              	<a href="javascript: void(0);" class="hc_fifth"> </a>
+              	<a href="javascript: void(0);" class="hc_sixth"> </a>
+              	<a href="javascript: void(0);" class="hc_seventh"> </a>
+              </div>
+
+    		</div>
+            <div id="hc_cta">
+           	  <img src="images/sherwin/44771.png" alt="colorsnap logo" class="hc_logo" />
+              <p class="hc_instruct">Capture color inspiration whenever it strikes.<br /> With ColorSnap from Sherwin-Williams, you have the power to take real-world colors and turn them into paint-color swatches - all on your smartphone.</p>
+              <a href="https://itunes.apple.com/us/app/colorsnap/id316256242?mt=8" class="hc_btn_download">DOWNLOAD NOW</a>
+              <a href="#" class="hc_btn_startover">START OVER</a>
+            </div>
+        </div> <!-- close hc_content -->
+</div> <!-- close hc_richmedia -->
